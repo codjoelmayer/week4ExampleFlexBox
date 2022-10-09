@@ -32,6 +32,7 @@ main {
 }
 .reversed-container {
     flex-direction: row-reverse;
+    color: var(--secondaryColor);
 }
 .reversedRow {
     background-color: var(--alternativeColor);
