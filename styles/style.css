@@ -27,19 +27,20 @@ a gift,
 flex-flow: Shorthand property for flex-direction and flex-wrap: such as row wrap, justify-content: It is used to algn the flex-items by center, space-between etc., align-items: It is used to align the flex-items, 
 align-content: It is used to align the flex lines.
 */
-.container, .reversed-container, .order-container{
+.container, .reversed-container, .order-container,
+.grow-container{
     display: flex;
 }
 /* 
 Flex-item properties:
 - order: Specify the order of the flex items.
-- flex-grow: 
+- flex-grow: Specify how much a flex item will grow relative to the rest of the items
 - flex-shrink: 
 - flex-basis: 
 - flex: 
 - align-self: 
 */
-.item, .reversedRow, .orderRow {
+.item, .reversedRow, .orderRow, .growRow{
     width: 200px;
     height: 200px;
     margin: 10px;
@@ -47,6 +48,7 @@ Flex-item properties:
 .item {
     background-color: var(--greenColor);
 }
+/* Reversed */
 .reversed-container {
     flex-direction: row-reverse;
     color: var(--secondaryColor);
@@ -67,6 +69,16 @@ Flex-item properties:
 .orderRow:first-child {
     order: 3;
 }
+/* grow */
+.growRow {
+    background-color: darkkhaki;
+}
+.growRow:first-child {
+    flex-grow: 1;
+}
+.growRow:last-child {
+    flex-grow: 2;
+}
 /* wrap */
 h2 {
     text-align: center;
@@ -83,3 +95,4 @@ h2 {
     max-width: 40%;
     object-fit: scale-down;
 }
+/*  */
