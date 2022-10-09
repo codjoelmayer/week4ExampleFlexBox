@@ -1,3 +1,11 @@
+/* Define custom variables */
+:root {
+    --primaryColor: black;
+    --secondaryColor: white;
+    --alternativeColor: rgba(79, 85, 87, 0.9);
+    --greenColor: rgba(11, 130, 11, .7);
+    --mainBoxShadow: .6vw .6vw 1vw rgba(120, 200, 87, 11);
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +18,25 @@ main {
     min-width: 100vw;   
     min-height: 100vh;
 }
+/* container */
+.container, .reversed-container{
+    display: flex;
+}
+.item, .reversedRow {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.item {
+    background-color: var(--greenColor);
+}
+.reversed-container {
+    flex-direction: row-reverse;
+}
+.reversedRow {
+    background-color: var(--alternativeColor);
+}
+
 /* wrap */
 h2 {
     text-align: center;
