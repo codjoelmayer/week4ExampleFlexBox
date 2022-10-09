@@ -4,7 +4,8 @@
     --secondaryColor: white;
     --alternativeColor: rgba(79, 85, 87, 0.9);
     --greenColor: rgba(11, 130, 11, .7);
-    --mainBoxShadow: .6vw .6vw 1vw rgba(120, 200, 87, 11);
+    /* none | h-offset (X) v-offset (Y) blur spread color */
+    --mainBoxShadow: .3vw .3vw 1vw rgba(120, 200, 87, 11);
 }
 *{
     margin: 0;
@@ -28,7 +29,7 @@ flex-flow: Shorthand property for flex-direction and flex-wrap: such as row wrap
 align-content: It is used to align the flex lines.
 */
 .container, .reversed-container, .order-container,
-.grow-container, .shrink-container{
+.grow-container, .shrink-container, .basis-container{
     display: flex;
 }
 /* 
@@ -36,12 +37,12 @@ Flex-item properties:
 - order: Specify the order of the flex items.
 - flex-grow: Specify how much a flex item will grow relative to the rest of the items
 - flex-shrink: Specify how much a flex item will shrink / change from other items
-- flex-basis: 
+- flex-basis: Specify an initial length to a flex item
 - flex: 
 - align-self: 
 */
 .item, .reversedRow, .orderRow, .growRow, 
-.shrinkRow{
+.shrinkRow, .basisRow{
     width: 200px;
     height: 200px;
     margin: 10px;
@@ -88,6 +89,15 @@ Flex-item properties:
     /* 0: you don't want it to shrink or become small */
     flex-shrink: 0;
     box-shadow: var(--mainBoxShadow);
+}
+/* Flex-basis */
+.basisRow {
+    background-color: darkolivegreen;
+    text-align: center;
+    color: var(--secondaryColor);
+}
+.basisRow:nth-child(2) {
+    flex-basis: 40vw;
 }
 /* wrap */
 h2 {
