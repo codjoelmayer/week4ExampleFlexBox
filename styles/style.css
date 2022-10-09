@@ -19,6 +19,14 @@ main {
     min-height: 100vh;
 }
 /* container */
+/*
+flex container properties: 
+- flex-direction: Define which direction the container want to display it items, 
+flex-wrap: Specify whether the flex items should be wrap or not. Such as wrapping 
+a gift, 
+flex-flow: Shorthand property for flex-direction and flex-wrap: such as row wrap, justify-content: It is used to algn the flex-items by center, space-between etc., align-items: It is used to align the flex-items, 
+align-content: It is used to align the flex lines.
+*/
 .container, .reversed-container{
     display: flex;
 }
