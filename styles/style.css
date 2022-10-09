@@ -29,7 +29,8 @@ flex-flow: Shorthand property for flex-direction and flex-wrap: such as row wrap
 align-content: It is used to align the flex lines.
 */
 .container, .reversed-container, .order-container,
-.grow-container, .shrink-container, .basis-container{
+.grow-container, .shrink-container, .basis-container, 
+.flex-container{
     display: flex;
 }
 /* 
@@ -38,11 +39,11 @@ Flex-item properties:
 - flex-grow: Specify how much a flex item will grow relative to the rest of the items
 - flex-shrink: Specify how much a flex item will shrink / change from other items
 - flex-basis: Specify an initial length to a flex item
-- flex: 
+- flex: Is shorthand property for the flex-grow, flex-shrink, and flex-basis
 - align-self: 
 */
 .item, .reversedRow, .orderRow, .growRow, 
-.shrinkRow, .basisRow{
+.shrinkRow, .basisRow, .flexRow{
     width: 200px;
     height: 200px;
     margin: 10px;
@@ -98,6 +99,15 @@ Flex-item properties:
 }
 .basisRow:nth-child(2) {
     flex-basis: 40vw;
+}
+/* Flex */
+.flexRow {
+    background-color: var(--alternativeColor);
+    color: var(--secondaryColor);
+}
+.flexRow:nth-child(3) {
+    /* flex-grow, flex-shrink, and flex-basis */
+    flex: 0 0 300px;
 }
 /* wrap */
 h2 {
