@@ -4,7 +4,7 @@
     --secondaryColor: white;
     --alternativeColor: rgba(79, 85, 87, 0.9);
     --greenColor: rgba(11, 130, 11, .7);
-    /* none | h-offset (X) v-offset (Y) blur spread color */
+    /* none | h-offset (X) v-offset (Y) blur spread color |inset|initial|inherit*/
     --mainBoxShadow: .3vw .3vw 1vw rgba(120, 200, 87, 11);
 }
 *,
